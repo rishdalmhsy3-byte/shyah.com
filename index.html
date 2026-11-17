@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وقف كولر مياه لعابري السبيل - محمد احمد بانقا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; }
+        }
+    </style>
+</head>
+<body class="bg-sky-50/40 text-slate-800 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-l from-sky-900 via-sky-800 to-teal-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-white/15 p-2.5 rounded-xl">
+                    <svg class="w-7 h-7 text-sky-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-xl font-black">وقف كولر مياه لعابري السبيل</h1>
+                        <span class="bg-emerald-500/20 border border-emerald-300/30 text-emerald-100 text-[11px] px-2.5 py-0.5 rounded-full font-bold">صدقة جارية</span>
+                    </div>
+                    <p class="text-xs text-sky-200 mt-0.5">وقف خيري باسم: <strong class="text-white">محمد احمد بانقا - عمر محمد احمد بانقا</strong></p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 no-print">
+                <button onclick="openModal('donateModal')" class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-xl font-bold shadow transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    تسجيل تبرع أو تحويل جديد
+                </button>
+                <button onclick="openModal('adminModal')" class="bg-sky-950 hover:bg-slate-900 text-sky-100 border border-sky-600/50 px-4 py-2 rounded-xl font-medium transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    لوحة المشرف
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+
+        <!-- Quranic Verse & Donation Accounts Banner -->
+        <div class="bg-white rounded-2xl shadow-sm border border-sky-100 p-6 space-y-5">
+            <div class="text-center border-b border-slate-100 pb-4">
+                <p class="text-sky-900 font-bold text-lg">قال تعالى: ﴿ وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ اللَّهِ ﴾ <span class="text-xs font-normal text-slate-500">[البقرة: 110]</span></p>
+                <p class="text-sm text-slate-600 mt-1">ساهم في توفير كولر مياه لعابري السبيل صدقة جارية عن <strong class="text-sky-900">محمد احمد بانقا</strong> و <strong class="text-sky-900">عمر محمد احمد بانقا</strong> — اللهم تقبل منا ومنكم صالح الأعمال</p>
+            </div>
+
+            <!-- Bank & Contact Details Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Bankak -->
+                <div class="bg-red-50/70 border border-red-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-red-700 text-white text-xs font-bold px-3 py-1 rounded-lg">بنكك (Bankak)</span>
+                        <button onclick="copyText('9351811')" class="text-xs text-red-700 hover:underline font-bold no-print">نسخ الرقم</button>
+                    </div>
+                    <div class="space-y-1 text-sm">
+                        <p class="text-slate-600">رقم الحساب: <strong class="text-slate-900 text-base tracking-wider select-all">9351811</strong></p>
+                        <p class="text-slate-600">الاسم: <strong class="text-slate-900">مؤيد الصادق</strong></p>
+                    </div>
+                </div>
+
+                <!-- My Cash -->
+                <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-lg">ماي كاش (My Cash)</span>
+                        <button onclick="copyText('403046196')" class="text-xs text-amber-800 hover:underline font-bold no-print">نسخ الرقم</button>
+                    </div>
+                    <div class="space-y-1 text-sm">
+                        <p class="text-slate-600">رقم الحساب: <strong class="text-slate-900 text-base tracking-wider select-all">403046196</strong></p>
+                        <p class="text-slate-600">الاسم: <strong class="text-slate-900">عبدالله موسى</strong></p>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Numbers -->
+                <div class="bg-emerald-50/70 border border-emerald-200 rounded-xl p-4 flex flex-col justify-between">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-lg">أرقام واتساب للتواصل</span>
+                    </div>
+                    <div class="space-y-1 text-sm">
+                        <p class="text-slate-700 font-bold tracking-wider select-all" dir="ltr">0117865345</p>
+                        <p class="text-slate-700 font-bold tracking-wider select-all" dir="ltr">0118709192</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                <div class="bg-emerald-100 text-emerald-800 p-3.5 rounded-xl font-bold">ر.س</div>
+                <div>
+                    <p class="text-xs text-slate-500 font-medium">إجمالي التبرعات (السعودية)</p>
+                    <h3 id="totalDonationsSAR" class="text-2xl font-black text-slate-900 mt-1">0 ر.س</h3>
+                </div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                <div class="bg-sky-100 text-sky-800 p-3.5 rounded-xl font-bold">تحويل</div>
+                <div>
+                    <p class="text-xs text-slate-500 font-medium">إجمالي المحول للسودان</p>
+                    <h3 id="totalTransferredSAR" class="text-2xl font-black text-slate-900 mt-1">0 ر.س</h3>
+                </div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                <div class="bg-amber-100 text-amber-800 p-3.5 rounded-xl font-bold">متبقي</div>
+                <div>
+                    <p class="text-xs text-slate-500 font-medium">الرصيد المتبقي (السعودية)</p>
+                    <h3 id="remainingSAR" class="text-2xl font-black text-emerald-700 mt-1">0 ر.س</h3>
+                </div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex items-center gap-4">
+                <div class="bg-teal-100 text-teal-800 p-3.5 rounded-xl font-bold">الوقف</div>
+                <div>
+                    <p class="text-xs text-slate-500 font-medium">إجمالي صندوق الوقف (جنيه)</p>
+                    <h3 id="totalSudanSDG" class="text-2xl font-black text-teal-700 mt-1">0 ج.س</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Public Records Table Section -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-6 border-b border-slate-100 flex flex-wrap justify-between items-center gap-4">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">سجل المصداقية والمتابعة المالية للوقف</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">جميع المساهمات والتحويلات
