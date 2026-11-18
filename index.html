@@ -298,17 +298,17 @@
         let appSettings = { adminPin: '1234', globalRate: 350 };
         let isAdminLoggedIn = false;
 
-        onSnapshot(doc(db, "settings", "config"), (docSnap) => {
+        onSnapshot(doc(db, "settings", "cooler_config"), (docSnap) => {
             if (docSnap.exists()) {
                 appSettings = { ...appSettings, ...docSnap.data() };
             } else {
-                setDoc(doc(db, "settings", "config"), appSettings).catch(()=>{});
+                setDoc(doc(db, "settings", "cooler_config"), appSettings).catch(()=>{});
             }
             document.getElementById('globalExchangeRate').value = appSettings.globalRate;
             calculateDonationEquivalent();
         });
 
-        const q = query(collection(db, "transactions"), orderBy("createdAt", "desc"));
+        const q = query(collection(db, "cooler_transactions"), orderBy("createdAt", "desc"));
         onSnapshot(q, (snapshot) => {
             const statusEl = document.getElementById('connectionStatus');
             statusEl.innerText = "متصل لحظياً ●";
@@ -379,7 +379,7 @@
                 let sarAmount = currency === 'SAR' ? amount : (amount / rate);
                 let sdgAmount = currency === 'SDG' ? amount : (amount * rate);
 
-                await addDoc(collection(db, "transactions"), {
+                await addDoc(collection(db, "cooler_transactions"), {
                     date: new Date().toISOString().split('T')[0],
                     createdAt: Date.now(),
                     name: document.getElementById('donName').value,
@@ -411,7 +411,7 @@
             const rate = appSettings.globalRate;
             const sdgAmount = amountSAR * rate;
 
-            await addDoc(collection(db, "transactions"), {
+            await addDoc(collection(db, "cooler_transactions"), {
                 date: new Date().toISOString().split('T')[0],
                 createdAt: Date.now(),
                 name: document.getElementById('transRef').value,
@@ -434,7 +434,7 @@
             const amountSDG = parseFloat(document.getElementById('expAmountSDG').value);
             const title = document.getElementById('expTitle').value;
 
-            await addDoc(collection(db, "transactions"), {
+            await addDoc(collection(db, "cooler_transactions"), {
                 date: new Date().toISOString().split('T')[0],
                 createdAt: Date.now(),
                 name: title,
@@ -452,19 +452,19 @@
         };
 
         window.approvePending = async function(id) {
-            await updateDoc(doc(db, "transactions", id), { status: 'approved' });
+            await updateDoc(doc(db, "cooler_transactions", id), { status: 'approved' });
         };
 
         window.deleteRecord = async function(id) {
             if(confirm('هل تريد حذف هذا السجل نهائياً؟')) {
-                await deleteDoc(doc(db, "transactions", id));
+                await deleteDoc(doc(db, "cooler_transactions", id));
             }
         };
 
         window.updateGlobalRate = async function() {
             const newRate = parseFloat(document.getElementById('globalExchangeRate').value);
             if(newRate > 0) {
-                await setDoc(doc(db, "settings", "config"), { globalRate: newRate }, { merge: true });
+                await setDoc(doc(db, "settings", "cooler_config"), { globalRate: newRate }, { merge: true });
                 alert('تم تحديث سعر الصرف.');
             }
         };
